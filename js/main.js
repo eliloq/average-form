@@ -3,11 +3,10 @@ let count=+(prompt("enter the count of scores"))
 let html=""
 for (let i = 1; i <= count; i++) {
   html+=`
-  <label for="score">Score:</label>
+  Score:
   <input type="text" name="score" required/>
-  <label for="quotient">Quotient:</label>
+  Quotient:
   <input type="text" name="quotient" required/>
-  <br />
   `
 }
 
@@ -45,6 +44,6 @@ for (let i = 0; i < scores.length; i++) {
    totalQuotient+= Number(quotients[i]);
 }
 
-avg=sum/totalQuotient;
+avg=(sum/totalQuotient).toFixed(2);
 averageForm.innerHTML=`The average of your scores is ${avg}`
 })
